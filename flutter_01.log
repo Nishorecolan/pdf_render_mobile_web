@@ -1,0 +1,96 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color pub get
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = '/Users/cipl0950/Documents/Flutter Sdk/flutter 3.7.11 arm64/bin/cache/pkg/sky_engine/pubspec.yaml' (OS Error: Operation not permitted, errno = 1)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:635:7)
+#1      _File.openSync (dart:io/file_impl.dart:479:5)
+#2      _File.readAsBytesSync (dart:io/file_impl.dart:539:18)
+#3      _File.readAsStringSync (dart:io/file_impl.dart:584:18)
+#4      ForwardingFile.readAsStringSync (package:file/src/forwarding/forwarding_file.dart:96:16)
+#5      _pluginFromPackage (package:flutter_tools/src/flutter_plugins.dart:45:36)
+#6      findPlugins (package:flutter_tools/src/flutter_plugins.dart:88:28)
+<asynchronous suspension>
+#7      PackagesGetCommand.usageValues (package:flutter_tools/src/commands/packages.dart:102:36)
+<asynchronous suspension>
+#8      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1371:15)
+<asynchronous suspension>
+#9      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1209:27)
+<asynchronous suspension>
+#10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#11     CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+<asynchronous suspension>
+#12     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:281:9)
+<asynchronous suspension>
+#13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+<asynchronous suspension>
+#15     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#16     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#17     main (package:flutter_tools/executable.dart:91:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.3.3, on macOS 13.4 22F66 darwin-arm, locale en-IN)
+    • Flutter version 3.3.3 on channel stable at /Users/cipl0950/Documents/Flutter Sdk/flutter 3.3.3/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 18a827f393 (1 year, 3 months ago), 2022-09-28 10:03:14 -0700
+    • Engine revision 5c984c26eb
+    • Dart version 2.18.2
+    • DevTools version 2.15.0
+
+[!] Android toolchain - develop for Android devices (Android SDK version 33.0.0)
+    • Android SDK at /Users/cipl0950/Library/Android/sdk
+    • Platform android-33, build-tools 33.0.0
+    • ANDROID_HOME = /Users/cipl0950/Library/Android/sdk
+    • Java binary at: /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java
+    • Java version Java(TM) SE Runtime Environment (build 1.8.0_371-b11)
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/macos#android-setup for more details.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 14.3)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Build 14E222b
+    • CocoaPods version 1.13.0
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[!] Android Studio (version 2022.2)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    ✗ Unable to find bundled Java version.
+    • Try updating or re-installing Android Studio.
+
+[✓] VS Code (version 1.70.2)
+    • VS Code at /Users/cipl0950/Downloads/Visual Studio Code.app/Contents
+    • Flutter extension version 3.60.0
+
+[✓] Connected device (3 available)
+    • SM M127G (mobile) • RZ8R31A7C3K • android-arm64  • Android 13 (API 33)
+    • macOS (desktop)   • macos       • darwin-arm64   • macOS 13.4 22F66 darwin-arm
+    • Chrome (web)      • chrome      • web-javascript • Google Chrome 120.0.6099.71
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 2 categories.
+```
